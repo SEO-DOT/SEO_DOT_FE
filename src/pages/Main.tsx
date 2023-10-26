@@ -1,4 +1,4 @@
-import Header from "../components/Header";
+import Header from "../components/common/Header";
 import Nav from "../components/Main/Nav";
 import Visual from "../components/Main/Visual";
 

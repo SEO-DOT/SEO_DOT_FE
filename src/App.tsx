@@ -1,6 +1,7 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import MyPage from "./pages/MyPage";
 import Main from "./pages/Main";
+import CartPage from "./pages/CartPage";
 
 const App = () => {
   return (
@@ -9,6 +10,7 @@ const App = () => {
         <Routes>
           <Route path="/" element={<Main />} />
           <Route path="/mypage" element={<MyPage />} />
+          <Route path="/cart" element={<CartPage />} />
         </Routes>
       </BrowserRouter>
     </div>
