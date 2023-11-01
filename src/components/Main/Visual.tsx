@@ -1,21 +1,28 @@
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Pagination, Scrollbar, A11y } from "swiper/modules";
+import { Pagination } from "swiper/modules";
+import "swiper/css/pagination";
 
-const Visual = () => {
+const Visual = ({ slides }: { slides: any[] }) => {
   return (
     <div>
       <Swiper
-        className="w-full mt-[28px]"
-        modules={[Navigation, Pagination, Scrollbar, A11y]}
-        slidesPerView={1} // 한 번에 보여줄 슬라이드 수
-        navigation
+        className="mt-[28px] h-[320px]"
+        modules={[Pagination]}
+        slidesPerView={1.3268} // 한 번에 보여줄 슬라이드 수
+        spaceBetween={14}
         pagination={{ clickable: true }}
         scrollbar={{ draggable: true }}
       >
-        <SwiperSlide className="w-[243px]">슬라이드 1</SwiperSlide>
-        <SwiperSlide className="w-[243px]">슬라이드 2</SwiperSlide>
-        <SwiperSlide className="w-[243px]">슬라이드 3</SwiperSlide>
+        {slides.map((slide) => (
+          <SwiperSlide className="h-[243px]" key={slide.image}>
+            <img
+              className="object-cover h-full rounded-bl-[30px]"
+              src={slide.image}
+              alt={slide}
+            ></img>
+          </SwiperSlide>
+        ))}
       </Swiper>
     </div>
   );
