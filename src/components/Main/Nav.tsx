@@ -1,6 +1,6 @@
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import "swiper/css";
+import "./styles.css";
 
 const categories = [
   {
@@ -25,10 +25,17 @@ const categories = [
 
 const Nav = () => {
   return (
-    <div className="overflow-hidden whitespace-nowrap">
-      <Swiper spaceBetween={24} slidesPerView={4}>
+    <div className="nav-wrapper">
+      <Swiper
+        spaceBetween={24} // 사이 간격
+        slidesPerView={4} // 한번에 보여줄 갯수
+      >
         {categories.map((category) => (
-          <SwiperSlide className="inline-block" key={category.title}>
+          <SwiperSlide
+            className="nav-slide"
+            key={category.title}
+            style={{ width: "auto" }}
+          >
             {category.title}
           </SwiperSlide>
         ))}
@@ -38,6 +45,3 @@ const Nav = () => {
 };
 
 export default Nav;
-
-// 문제점
-// width 를 수정할 수가 없다.
