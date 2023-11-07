@@ -8,7 +8,6 @@ import SignupPage from "./pages/SignupPage";
 import PaymentPage from "./pages/PaymentPage";
 import ListPage from "./pages/ListPage";
 import DetailPage from "./pages/DetailPage";
-import Bookmark from "./components/Main/Bookmark";
 import BookmarkPage from "./pages/BookmarkPage";
 import NotFound from "./pages/NotFound";
 
