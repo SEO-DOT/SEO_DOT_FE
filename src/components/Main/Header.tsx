@@ -1,5 +1,5 @@
 import React from "react";
-import Cart from "../assets/images/main/cart.svg";
+import Cart from "../../assets/images/main/cart.svg";
 
 const Header = () => {
   return (

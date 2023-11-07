@@ -57,7 +57,7 @@ const NewBook = () => {
         <Swiper
           className=""
           spaceBetween={10} // 사이 간격
-          slidesPerView={4} // 한번에 보여줄 갯수
+          slidesPerView={3.5} // 한번에 보여줄 갯수
         >
           {categories.map((category) => (
             <SwiperSlide
