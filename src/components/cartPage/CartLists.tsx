@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import { ReactComponent as CheckBox } from "../../assets/images/check-circle.svg";
-import { ReactComponent as XButton } from "../../assets/images/x.svg";
+import { ReactComponent as CheckBox } from "../../assets/images/cartPage/check-circle.svg";
+import { ReactComponent as XButton } from "../../assets/images/cartPage/x.svg";
 
 interface CartItem {
     id: number;
@@ -26,6 +26,10 @@ const CartLists = () => {
         setCartItems((prevItems) =>
             prevItems.map((item) => (item.id === itemId ? { ...item, quantity: Math.min(100, item.quantity + 1) } : item))
         );
+    };
+
+    const handleChange = () => {
+        console.log("111");
     };
 
     return (
@@ -55,6 +59,7 @@ const CartLists = () => {
                                 <input
                                     className="w-4"
                                     value={item.quantity}
+                                    onChange={handleChange}
                                 />
                                 <button
                                     onClick={() => plusNumber(item.id)}

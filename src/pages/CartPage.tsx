@@ -1,6 +1,6 @@
 import React from "react";
 import CartLists from "../components/cartPage/CartLists";
-import { ReactComponent as CheckBox } from "../assets/images/check-circle.svg";
+import { ReactComponent as CheckBox } from "../assets/images/cartPage/check-circle.svg";
 import TopHeader from "../components/common/TopHeader";
 
 const CartPage = () => {
