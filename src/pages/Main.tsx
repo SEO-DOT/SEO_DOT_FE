@@ -1,6 +1,7 @@
+import React, { useEffect } from "react";
 import Header from "../components/Main/Header";
 import BestBook from "../components/Main/BestBook";
-import Bookmark from "../components/Main/Bookmark";
+import Bookmark from "../components/Main/BookMark";
 import Footer from "../components/Main/Footer";
 import Nav from "../components/Main/Nav";
 import NewBook from "../components/Main/NewBook";
@@ -8,8 +9,24 @@ import Notice from "../components/Main/Notice";
 import Review from "../components/Main/Review";
 import Visual from "../components/Main/Visual";
 import slides from "../components/Main/mock.json";
+import axios from "axios";
 
 const Main = () => {
+  const getDetail = async () => {
+    try {
+      const response = await axios.get(
+        `http://13.124.86.39:8080/api/welcome/new`
+      );
+      console.log(response);
+    } catch (error) {
+      console.log("error: ", error);
+    }
+  };
+
+  useEffect(() => {
+    getDetail();
+  }, []);
+
   return (
     <div className="w-[375px] px-6 mx-auto">
       {/* 헤더 */}
