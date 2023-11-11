@@ -5,6 +5,7 @@ import Recommand from "../components/detailPage/Recommand";
 import Review from "../components/detailPage/Review";
 import Transfer from "../components/detailPage/Transfer";
 import { ReactComponent as ShareButton } from "../assets/images/detailPage/share-android.svg";
+import axios from "axios";
 
 interface Book {
     bookId: number;
@@ -58,6 +59,11 @@ const DetailPage: React.FC = () => {
         3: "교환/반품/품절",
     };
 
+    const handleRatingChange = (score: number) => {
+        console.log(`Selected score: ${score}`);
+        // 여기에서 선택된 평점에 대한 처리를 수행하면 됩니다.
+    };
+
     useEffect(() => {
         if (clickedTab === 0) {
             console.log(0);
@@ -86,6 +92,19 @@ const DetailPage: React.FC = () => {
     useEffect(() => {
         console.log(product);
     }, [product]);
+
+    // const getDetail = async () => {
+    //     try {
+    //         const response = await axios.get(`http://13.124.86.39:8080/api/books/3`);
+    //         console.log(response);
+    //     } catch (error) {
+    //         console.log("error: ", error);
+    //     }
+    // };
+
+    // useEffect(() => {
+    //     getDetail();
+    // }, []);
 
     return (
         <section>
@@ -162,10 +181,22 @@ const DetailPage: React.FC = () => {
                 ))}
             </div>
             <div>
-                {clickedTab === 0 && <BookInformation />}
+                {/* {clickedTab === 0 && <BookInformation />}
                 {clickedTab === 1 && <Recommand />}
-                {clickedTab === 2 && <Review />}
-                {clickedTab === 3 && <Transfer />}
+                {clickedTab === 2 && (
+                    <Review
+                        score={parsedBookData.score}
+                        onRatingChange={handleRatingChange}
+                    />
+                )}
+                {clickedTab === 3 && <Transfer />} */}
+                <BookInformation />
+                <Recommand />
+                <Review
+                    score={parsedBookData.score}
+                    onRatingChange={handleRatingChange}
+                />
+                <Transfer />
             </div>
         </section>
     );
