@@ -34,7 +34,6 @@ const Review = () => {
           src={BookImg} // 이미지 파일 경로를 지정
           alt="reviewBook"
         />
-        {/* <div className="flex-initial mr-[15px] w-[120px] h-full bg-[#850505]"></div> */}
         <div className=" flex-cul flex-1 font-medium text-justify h-full overflow-hidden">
           <p className="items-center h-[19px] whitespace-nowrap mb-[8px] text-[16px]  text-black">
             책제목이 들어갑니다eeeegeee

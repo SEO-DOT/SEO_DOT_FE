@@ -29,10 +29,17 @@ const OrderTag = () => {
     color: activeCategory === text ? "#5EBAD9" : "#767676",
   });
 
+  const onClickCategory = (category: any) => {
+    setActiveCategory(category);
+  };
+
   return (
     <div>
-      <section className="w-full h-[62px] bg-[#daf019] flex items-center justify-center overflow-x-scroll">
-        <div className="flex" style={{ whiteSpace: "nowrap" }}>
+      <section className="px-[24px] w-full h-[62px] bg-[#daf019] flex items-center justify-center overflow-x-scroll">
+        <div
+          className="pl-[48px] flex bg-[#fff]"
+          style={{ whiteSpace: "nowrap" }}
+        >
           {["#전체", "#준비중", "#배송중", "#배송완료", "#취소/교환"].map(
             (text, index) => (
               <div
@@ -41,6 +48,7 @@ const OrderTag = () => {
                 )}`}
                 style={getStyle(text)}
                 key={index}
+                onClick={() => onClickCategory(text)}
               >
                 <p className="text-[14px] font-nomal">{text}</p>
               </div>
