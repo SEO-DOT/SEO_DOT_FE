@@ -39,6 +39,16 @@
   @apply text-[#5ebad9] border-[#5ebad9];
 }
 
+/* BookMark */
+.bookmark-contents {
+  @apply text-[16px] text-left;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+
 /* Review */
 .review-contents {
   @apply text-[12px] text-left;

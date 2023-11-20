@@ -22,27 +22,17 @@ const Bookmark = ({ slides }: { slides: any[] }) => {
       {/* 슬라이드 */}
       <Swiper
         className="mt-[28px]"
-        slidesPerView={2.0925} // 한 번에 보여줄 슬라이드 수
+        slidesPerView={2} // 한 번에 보여줄 슬라이드 수
         spaceBetween={12}
         pagination={{ clickable: true }}
       >
         {slides.map((slide) => (
           <SwiperSlide className="flex flex-col" key={slide.image}>
-            <div className="flex flex-col h-[150px] rounded-[10px] overflow-hidden pb-[10px] pl-[13px] pr-[12px] box-border bg-[#D1D1D1]">
-              <div className="flex justify-end mt-[7px]">
-                <img src={Arrow_left} alt="" />
-              </div>
-              <div className="mb-[20px]">
-                <p>여유로운 휴일을 위한 리프레싱</p>
-              </div>
-              <div className="flex">
-                <div>1</div>
-                <div>2</div>
-              </div>
+            <div className="flex flex-col w-[160px] h-[160px] overflow-hidden pb-[10px] pl-[13px] pr-[12px] rounded-[4px] box-border bg-[#D1D1D1]">
+              <img src={Arrow_left} alt="" />
             </div>
-            <div className="flex mt-[8px]">
-              <div>#장르 1</div>
-              <div>#장르 2</div>
+            <div className="bookmark-contents flex mt-[8px]">
+              <div>텍스트가 들어갈 예정입니다. 텍스트가 들어갈 예정입니다.</div>
             </div>
           </SwiperSlide>
         ))}

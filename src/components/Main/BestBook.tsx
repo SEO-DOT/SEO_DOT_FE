@@ -1,6 +1,6 @@
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation } from "swiper/modules";
+import { EffectCoverflow, Pagination, Navigation } from "swiper/modules";
 
 import Arrow from "../../assets/images/main/arrow_right.svg";
 
@@ -36,16 +36,18 @@ const BestBook = () => {
           <img src={Arrow} alt="Next" />
         </div>
       </div>
+
       <Swiper
-        modules={[Navigation]}
+        modules={[EffectCoverflow, Pagination, Navigation]}
         effect="coverflow"
         loop={true}
-        slidesPerView={3}
+        slidesPerView={1.9277}
+        spaceBetween={20}
         centeredSlides
         coverflowEffect={{
           rotate: 0,
-          stretch: 70,
-          depth: 100,
+          stretch: 0,
+          slideShadows: true,
         }}
         navigation={{
           // navigation prop 설정
@@ -57,7 +59,7 @@ const BestBook = () => {
         {photos.map((img, index) => {
           return (
             <SwiperSlide key={index} className="">
-              <img className="rounded-[20px]" src={img} alt="" />
+              <img src={img} alt="" />
             </SwiperSlide>
           );
         })}
