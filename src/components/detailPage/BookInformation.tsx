@@ -45,7 +45,7 @@ const BookInformation = () => {
                         <img
                             src="https://contents.kyobobook.co.kr/sih/fit-in/814x0/dtl/illustrate/983/i9791167763983.jpg"
                             alt="book-information"
-                            className="w-full h-full"
+                            className="w-full h-full pt-[32px]"
                         />
                         <div
                             className="w-full h-[40px] bg-white flex justify-center items-center"
@@ -59,7 +59,7 @@ const BookInformation = () => {
                         <img
                             src="https://contents.kyobobook.co.kr/sih/fit-in/814x0/dtl/illustrate/983/i9791167763983.jpg"
                             alt="book-information"
-                            className="w-full h-[400px] line-clamp-5 overflow-hidden overflow-ellipsis"
+                            className="w-full h-[400px] line-clamp-5 overflow-hidden overflow-ellipsis pt-[32px]"
                         />
                         <div
                             className="w-full h-[40px] bg-white flex justify-center items-center"

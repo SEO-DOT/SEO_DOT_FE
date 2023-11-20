@@ -6,36 +6,7 @@ import Review from "../components/detailPage/Review";
 import Transfer from "../components/detailPage/Transfer";
 import { ReactComponent as ShareButton } from "../assets/images/detailPage/share-android.svg";
 import axios from "axios";
-
-interface Book {
-    bookId: number;
-    image: string;
-    title: string;
-    status: string;
-    stock: number;
-    views: number;
-    isbn: string;
-    author: string;
-    price: number;
-    discountRate: number;
-    discountPrice: number;
-    score: number;
-    bookmark: boolean;
-    description: string;
-    publicationDate: string;
-    publisher: string;
-    keywordList: string[];
-    categoryList: string[];
-}
-
-interface CartBook {
-    bookId: number;
-    image: string;
-    title: string;
-    price: number;
-    discountRate: number;
-    discountPrice: number;
-}
+import { Book, CartBook } from "../types/data";
 
 const DetailPage: React.FC = () => {
     const [product, setProduct] = useState<CartBook>({
