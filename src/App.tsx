@@ -18,6 +18,7 @@ import EditProfile from "./components/mypage/profile/EditProfile";
 const queryClient = new QueryClient();
 
 const App = () => {
+  
   return (
     <QueryClientProvider client={queryClient}>
       <div className="sm:relative pt-[54px] pb-0 px-0 text-center min-h-screen bg-[#fff] lex items-center">
