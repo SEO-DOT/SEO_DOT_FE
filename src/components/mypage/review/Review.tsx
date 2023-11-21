@@ -2,16 +2,18 @@ import React, { useEffect } from "react";
 import { ReactComponent as AnchorIcon } from "../../../assets/images/myPage/anchor.svg";
 import { ReactComponent as HeartIcon } from "../../../assets/images/myPage/heart.svg";
 import { ReactComponent as ChatIcon } from "../../../assets/images/myPage/chat-alt.svg";
-import { instance } from "../../../api/api";
+import {instance} from "../../../api/api";
 import BookImg from "../../../assets/images/myPage/Review_IMG.png";
 
 const Review = () => {
+  // const [reviewData, setReviewData] = useState([]);
+  // const [reviewInfo, setReviewInfo] = useState({});
   const getUserInfoReview = async () => {
     try {
       const response = await instance.get(
         `/api/mypage/reviews?page=1&per=20&sort=new`
       );
-      console.log("response.data", response.data);
+      console.log("response.data", response.data.data);
       return response.data;
     } catch (error) {
       console.error("mypage 조회 오류", error);

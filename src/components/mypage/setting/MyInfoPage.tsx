@@ -6,7 +6,9 @@ import { BsCart } from "react-icons/bs";
 
 const MyInfoPage: React.FC = () => {
   const navigate = useNavigate();
-  const [editing, setEditing] = useState(false);
+  const [nameEditing, setNameEditing] = useState(false);
+  const [phoneEditing, setPhoneEditing] = useState(false);
+  const [addressEditing, setAddressEditing] = useState(false);
   const [userName, setUserName] = useState("김서담");
   const [phoneNumber, setPhoneNumber] = useState("010-0000-0000");
   const [homeAddress, setHomeAddress] = useState("대구 수성구 달구벌대로 2435");
@@ -14,16 +16,40 @@ const MyInfoPage: React.FC = () => {
     navigate("/setting");
   };
 
-  const handleEdit = () => {
-    setEditing(true);
+  const handleNameEdit = () => {
+    setNameEditing(true);
   };
 
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const handlePhoneEdit = () => {
+    setPhoneEditing(true);
+  };
+
+  const handleAddressEdit = () => {
+    setAddressEditing(true);
+  };
+
+  const handleNameInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setUserName(e.target.value);
   };
 
-  const handleBlur = () => {
-    setEditing(false);
+  const handlePhoneInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setPhoneNumber(e.target.value);
+  };
+
+  const handleAddressInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setHomeAddress(e.target.value);
+  };
+
+  const handleNameBlur = () => {
+    setNameEditing(false);
+  };
+
+  const handlePhoneBlur = () => {
+    setPhoneEditing(false);
+  };
+
+  const handlerAddressBlur = () => {
+    setAddressEditing(false);
   };
   return (
     <div>
@@ -43,12 +69,12 @@ const MyInfoPage: React.FC = () => {
               <p className="text-[#7ecee9]">*</p>
             </div>
             <div className="flex w-full h-[36px] justify-between items-center">
-              {editing ? (
+              {nameEditing ? (
                 <input
                   type="text"
                   value={userName}
-                  onChange={handleInputChange}
-                  onBlur={handleBlur}
+                  onChange={handleNameInputChange}
+                  onBlur={handleNameBlur}
                   className="rounded  w-full h-[36px] py-[8.5px] mr-[4px]"
                 />
               ) : (
@@ -58,7 +84,7 @@ const MyInfoPage: React.FC = () => {
               )}
               <button
                 className="rounded h-full w-[72px] border-[1px] border-[#7ecee9] font-bold text-[14px] text-[#7ecee9] bg-[#fff]"
-                onClick={handleEdit}
+                onClick={handleNameEdit}
               >
                 변경
               </button>
@@ -70,12 +96,12 @@ const MyInfoPage: React.FC = () => {
               <p className="text-[#7ecee9]">*</p>
             </div>
             <div className="flex w-full h-[36px] justify-between items-center">
-              {editing ? (
+              {addressEditing ? (
                 <input
                   type="text"
                   value={homeAddress}
-                  onChange={handleInputChange}
-                  onBlur={handleBlur}
+                  onChange={handleAddressInputChange}
+                  onBlur={handlerAddressBlur}
                   className="rounded  w-full h-[36px] py-[8.5px] mr-[4px]"
                 />
               ) : (
@@ -85,7 +111,7 @@ const MyInfoPage: React.FC = () => {
               )}
               <button
                 className="rounded h-full w-[72px] border-[1px] border-[#7ecee9] font-bold text-[14px] text-[#7ecee9] bg-[#fff]"
-                onClick={handleEdit}
+                onClick={handleAddressEdit}
               >
                 변경
               </button>
@@ -97,12 +123,12 @@ const MyInfoPage: React.FC = () => {
               <p className="text-[#7ecee9]">*</p>
             </div>
             <div className="flex w-full h-[36px] justify-between items-center">
-              {editing ? (
+              {phoneEditing ? (
                 <input
                   type="text"
                   value={phoneNumber}
-                  onChange={handleInputChange}
-                  onBlur={handleBlur}
+                  onChange={handlePhoneInputChange}
+                  onBlur={handlePhoneBlur}
                   className="rounded  w-full h-[36px] py-[8.5px] mr-[4px]"
                 />
               ) : (
@@ -112,9 +138,20 @@ const MyInfoPage: React.FC = () => {
               )}
               <button
                 className="rounded h-full w-[72px] border-[1px] border-[#7ecee9] font-bold text-[14px] text-[#7ecee9] bg-[#fff]"
-                onClick={handleEdit}
+                onClick={handlePhoneEdit}
               >
                 변경
+              </button>
+            </div>
+          </div>
+          <div className="my-[16px]">
+            <div className="flex text-[16px] font-medium">
+              <p>본인인증</p>
+            </div>
+            <div className="flex w-full h-[36px] justify-between items-center text-[16px] text-[#767676]">
+              인증완료
+              <button className="rounded h-full w-[72px] border-[1px] border-[#7ecee9] font-bold text-[14px] text-[#7ecee9] bg-[#fff]">
+                재인증
               </button>
             </div>
           </div>
