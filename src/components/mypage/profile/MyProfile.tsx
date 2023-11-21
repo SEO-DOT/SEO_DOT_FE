@@ -1,7 +1,7 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import { ReactComponent as GearIcon } from "../../../assets/images/myPage/gear.svg";
-import { ReactComponent as PencilIcon } from "../../../assets/images/myPage/pencil.svg";
+import { ReactComponent as GearIcon } from "../../../assets/images/mypage/gear.svg";
+import { ReactComponent as PencilIcon } from "../../../assets/images/mypage/pencil.svg";
 
 const MyProfile = () => {
   const navigate = useNavigate();
