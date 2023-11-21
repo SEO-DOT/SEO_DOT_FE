@@ -40,11 +40,13 @@ const List = () => {
 
       {/* ITEM LIST */}
       <div className="flex justify-between flex-wrap">
-        {/* 박스형 */}
-        <BoxItem />
-        <BoxItem />
-        {/* 스케줄형 */}
-        <BoxSchedule />
+        {viewToggle ? (
+          // 스케줄형
+          <BoxSchedule />
+        ) : (
+          // 박스형
+          <BoxItem />
+        )}
       </div>
     </div>
   );
