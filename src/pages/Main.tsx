@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import Header from "../components/Main/Header";
 import BestBook from "../components/Main/BestBook";
-import Bookmark from "../components/Main/BookMark";
+import Bookmark from "../components/Main/Bookmark";
 import Footer from "../components/Main/Footer";
 import Nav from "../components/Main/Nav";
 import NewBook from "../components/Main/NewBook";

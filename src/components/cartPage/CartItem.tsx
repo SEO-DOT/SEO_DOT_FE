@@ -1,20 +1,17 @@
 import React, { useState } from "react";
 import { ReactComponent as CheckBox } from "../../assets/images/cartPage/check-circle.svg";
+import { ReactComponent as CheckedBox } from "../../assets/images/cartPage/check-circle-fill.svg";
 import { ReactComponent as XButton } from "../../assets/images/cartPage/x.svg";
 import { ReactComponent as PlusButton } from "../../assets/images/cartPage/plus.svg";
 import { ReactComponent as MinusButton } from "../../assets/images/cartPage/minus.svg";
+import { CartItems } from "../../types/data";
+import { deleteCart } from "../../api/api";
+import { QueryClient, useMutation, useQueryClient } from "@tanstack/react-query";
+import { QueryKeys, getClient } from "../../queryClient";
 
-interface CartItem {
-    id: number;
-    name: string;
-    quantity: number;
-}
-
-const CartLists = () => {
-    const [cartItems, setCartItems] = useState<CartItem[]>([
-        { id: 1, name: "Item 1", quantity: 1 },
-        // Add more items as needed
-    ]);
+const CartItem = () => {
+    const queryClient = useQueryClient();
+    const [cartItems, setCartItems] = useState<CartItems[]>([{ id: 1, name: "Item 1", quantity: 1 }]);
 
     // const [inputValue, setInputValue] = useState<string>("");
 
@@ -34,13 +31,29 @@ const CartLists = () => {
         console.log("111");
     };
 
+    // const { mutate: deleteCartItem } = useMutation((itemId: number) => deleteCart(itemId), {
+    //     onSuccess: () => {
+    //         queryClient.invalidateQueries([QueryKeys.CART]);
+    //     },
+    // });
+
+    // const handleDeleteItem = (itemId: number) => {
+    //     deleteCartItem(itemId);
+    // };
+
     return (
         <section className="p-24 pt-[20px] pb-[20px] border-b-[1px] flex">
-            <CheckBox />
+            <input type="checkbox">
+                <CheckBox />
+            </input>
+
             <div className="w-full">
-                <div className="flex justify-end">
+                <button
+                    type="button"
+                    // onClick={handleDeleteItem(itemId)}
+                >
                     <XButton />
-                </div>
+                </button>
                 <div className="flex">
                     <img
                         src="https://images.unsplash.com/photo-1543002588-bfa74002ed7e?auto=format&fit=crop&q=60&w=800&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8Ym9va3xlbnwwfHwwfHx8MA%3D%3D"
@@ -65,4 +78,4 @@ const CartLists = () => {
     );
 };
 
-export default CartLists;
+export default CartItem;
