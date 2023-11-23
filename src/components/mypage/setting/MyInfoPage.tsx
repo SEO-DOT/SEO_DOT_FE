@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import BottomNav from "../../common/BottomNav";
-import { ReactComponent as ArrowLeft } from "../../../assets/images/mypage/arrow-left.svg";
+import { ReactComponent as ArrowLeft } from "../../../assets/images/myPage/arrow-left.svg";
 import { BsCart } from "react-icons/bs";
 
 const MyInfoPage: React.FC = () => {
