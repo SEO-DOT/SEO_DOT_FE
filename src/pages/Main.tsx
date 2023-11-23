@@ -1,14 +1,14 @@
 import React, { useEffect } from "react";
 import Header from "../components/Main/Header";
 import BestBook from "../components/Main/BestBook";
-import Bookmark from "../components/Main/Bookmark";
+import BookMark from "../components/Main/BookMark";
 import Footer from "../components/Main/Footer";
 import Nav from "../components/Main/Nav";
 import NewBook from "../components/Main/NewBook";
 import Notice from "../components/Main/Notice";
 import Review from "../components/Main/Review";
 import Visual from "../components/Main/Visual";
-import slides from "../components/Main/mock.json";
+import slides from "../components/Main/Visual.json";
 import axios from "axios";
 
 const Main = () => {
@@ -42,7 +42,7 @@ const Main = () => {
       {/* 인기리뷰 */}
       <Review />
       {/* 북마크리스트 */}
-      <Bookmark slides={slides} />
+      <BookMark slides={slides} />
       {/* 안내 */}
       <Notice />
       {/* 푸터 */}

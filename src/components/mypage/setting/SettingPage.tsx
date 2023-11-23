@@ -4,6 +4,7 @@ import { BsCart } from "react-icons/bs";
 import { ReactComponent as ArrowLeft } from "../../../assets/images/myPage/arrow-left.svg";
 import { ReactComponent as ArrowRight } from "../../../assets/images/myPage/arrow-right.svg";
 import BottomNav from "../../common/BottomNav";
+
 const Setting = () => {
   const navigate = useNavigate();
   const onClickMyInfoPage = () => {

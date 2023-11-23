@@ -18,7 +18,7 @@ const Visual = ({ slides }: { slides: any[] }) => {
           <SwiperSlide className="h-[243px]" key={slide.image}>
             <img
               className="object-cover h-full rounded-bl-[30px]"
-              src={slide.image}
+              src={slide.url}
               alt={slide}
             />
           </SwiperSlide>
