@@ -53,7 +53,7 @@ const Review = () => {
       //console.log("response.data", response.data.data);
       return response.data;
     } catch (error) {
-      console.error("mypage 조회 오류", error);
+      console.error("mypage 리뷰조회 오류", error);
     }
   };
 
@@ -65,16 +65,6 @@ const Review = () => {
     if (reviewData.length > 0) {
       const selectedReviewLog = reviewData[0];
 
-      // // 첫 번째 책 정보 가져오기
-      // const firstBook =
-      //   selectedReviewLog.book.length > 0
-      //     ? selectedReviewLog.book[0]
-      //     : {
-      //         bookTitle: "",
-      //         bookImage: "",
-      //         author: "",
-      //         publisher: "",
-      //       };
       setReviewInfo({
         reviewId: selectedReviewLog.reviewId,
         nickname: selectedReviewLog.nickname,
@@ -118,7 +108,7 @@ const Review = () => {
                 alt="reviewBook"
               />
               <div className=" flex-cul flex-1 font-medium text-justify h-full overflow-hidden">
-                <p className="items-center h-[19px] whitespace-nowrap mb-[8px] text-[16px]  text-black">
+                <p className="items-center h-[19px] whitespace-nowrap mb-[8px] text-[14px]  text-black">
                   {review.book.bookTitle}
                 </p>
                 <div
@@ -130,12 +120,13 @@ const Review = () => {
                   }}
                 >
                   <p>{review.book.author}</p>
+                  <div className="mx-[8px] w-[0.5px] h-[12px] bg-[#959595]"></div>
                   <p>{review.book.publisher}</p>
                 </div>
-                <p className="whitespace-nowrap h-[14px] mb-[8px] text-[12px] text-[#767676]">
+                <p className="whitespace-nowrap h-[14px] mb-[8px] text-[12px] text-[#959595]">
                   {review.nickname}
                 </p>
-                <p className="text-[12px] text-[#000] h-[64px] overflow-hidden">
+                <p className="text-[10px] text-[#000] h-[64px] overflow-hidden">
                   {review.contents}
                 </p>
                 <div className="mt-[8px] flex items-center justify-between first-letter:mt-[8px] w-[160px] h-[16px]">
@@ -163,56 +154,6 @@ const Review = () => {
           <p>아직 쓴 리뷰가 없어요.</p>
         </div>
       )}
-      {/* <div
-        className="flex p-[16px] rounded-[20px] w-full h-[200px] bg-[#F2F3F4]
-      shadow-[8px_8px_8px_0_rgba(0,0,0,0.08)]
-      "
-      >
-        <img
-          className="flex-initial mr-[15px] w-[120px] h-full"
-          src={BookImg} // 이미지 파일 경로를 지정
-          alt="reviewBook"
-        />
-        <div className=" flex-cul flex-1 font-medium text-justify h-full overflow-hidden">
-          <p className="items-center h-[19px] whitespace-nowrap mb-[8px] text-[16px]  text-black">
-            책제목이 들어갑니다eeeegeee
-          </p>
-          <div
-            className="mb-[8px] h-[14px] flex text-[12px] text-[#767676] items-center"
-            style={{
-              whiteSpace: "nowrap",
-              textOverflow: "ellipsis",
-              overflow: "hidden",
-            }}
-          >
-            <p>작가입니다...</p>
-            <p>출판사가 들어갑...</p>
-          </div>
-          <p className="whitespace-nowrap h-[14px] mb-[8px] text-[12px] text-[#767676]">
-            닉네임(아이디)
-          </p>
-          <p className="text-[12px] text-[#000] h-[64px] overflow-hidden">
-            내용이 들어갑니다.내용이 들어갑니다.내용이 들어갑니다.내용이
-            들어갑니다.내용이 들어갑니다.내용이 들어갑니다.내용이
-            들어갑니다.내용이 들어갑니다.내용이 들어갑니다.내용이
-            들어갑니다.내용이 들어갑니다.내용이 들어갑니다.
-          </p>
-          <div className="mt-[8px] flex items-center justify-between first-letter:mt-[8px] w-[160px] h-[16px]">
-            <div className="flex items-center">
-              <AnchorIcon className="w-[16px] h-[16px]" />
-              <p className="text-[12px] text-[#767676]">5.0</p>
-            </div>
-            <div className="flex items-center">
-              <HeartIcon className="w-[12px] h-[10px]" />
-              <p className="text-[12px] text-[#767676]">100</p>
-            </div>
-            <div className="flex items-center">
-              <ChatIcon className="w-[16px] h-[16px]" />
-              <p className="text-[12px] text-[#767676]">100</p>
-            </div>
-          </div>
-        </div>
-      </div> */}
     </section>
   );
 };

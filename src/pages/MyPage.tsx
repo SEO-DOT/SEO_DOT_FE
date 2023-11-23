@@ -46,7 +46,7 @@ const MyPage = () => {
         />
         {activePage === "주문배송" ? <Order /> : <Review />}
       </MyPageBox>
-      {/* <BottomNav /> */}
+      <BottomNav />
     </>
   );
 };

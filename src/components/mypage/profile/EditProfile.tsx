@@ -13,6 +13,7 @@ const EditProfile = () => {
   const onClickMyInfoPage = () => {
     navigate("/setting/myinfo");
   };
+
   return (
     <div className="h-screen flex flex-col justify-between">
       <header className="fixed w-full top-0 px-[24px] py-[25px] h-[79px] flex justify-between items-center">
