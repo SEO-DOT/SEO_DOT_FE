@@ -1,9 +1,9 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import { BsCart } from "react-icons/bs";
-import { ReactComponent as ArrowLeft } from "../../../assets/images/mypage/arrow-left.svg";
-import { ReactComponent as CameraIcon } from "../../../assets/images/mypage/camera.svg";
-import { ReactComponent as ArrowRight } from "../../../assets/images/mypage/arrow-right.svg";
+import { ReactComponent as ArrowLeft } from "../../../assets/images/myPage/arrow-left.svg";
+import { ReactComponent as CameraIcon } from "../../../assets/images/myPage/camera.svg";
+import { ReactComponent as ArrowRight } from "../../../assets/images/myPage/arrow-right.svg";
 import BottomNav from "../../common/BottomNav";
 const EditProfile = () => {
   const navigate = useNavigate();

@@ -1,6 +1,6 @@
 import React from "react";
 import OrderTag from "./OrderTag";
-import BookImg from "../../../assets/images/mypage/Review_IMG.png";
+import BookImg from "../../../assets/images/myPage/Review_IMG.png";
 
 const Order = () => {
   return (
