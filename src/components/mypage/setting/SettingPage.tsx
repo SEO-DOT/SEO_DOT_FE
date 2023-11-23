@@ -1,8 +1,10 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { BsCart } from "react-icons/bs";
-import { ReactComponent as ArrowLeft } from "../../../assets/images/mypage/arrow-left.svg";
-import { ReactComponent as ArrowRight } from "../../../assets/images/mypage/arrow-right.svg";
+import { ReactComponent as ArrowLeft } from "../../../assets/images/myPage/arrow-left.svg";
+import { ReactComponent as ArrowRight } from "../../../assets/images/myPage/arrow-right.svg";
+import BottomNav from "../../common/BottomNav";
+
 const Setting = () => {
   const navigate = useNavigate();
   const onClickMyInfoPage = () => {
@@ -20,7 +22,7 @@ const Setting = () => {
     }
   };
   return (
-    <div className="bg-[#f66464]">
+    <div className="bg-[#a6f664]">
       <header className="px-[24px] py-[25px] h-[79px] flex justify-between items-center">
         <ArrowLeft
           className="w-[28px] h-[28px] cursor-pointer"
@@ -73,6 +75,7 @@ const Setting = () => {
           ))}
         </div>
       </section>
+      <BottomNav />
     </div>
   );
 };
