@@ -4,9 +4,13 @@ import { Pagination } from "swiper/modules";
 import "swiper/css/pagination";
 import "./styles.css";
 
+interface SlidesType {
+  url: string;
+}
+
 const Visual = ({ slides }: { slides: any[] }) => {
   return (
-    <div>
+    <div className="mx-6">
       <Swiper
         className="mt-[28px] h-[280px]"
         modules={[Pagination]}
@@ -14,12 +18,12 @@ const Visual = ({ slides }: { slides: any[] }) => {
         spaceBetween={14}
         pagination={{ clickable: true }}
       >
-        {slides.map((slide) => (
-          <SwiperSlide className="h-[243px]" key={slide.image}>
+        {slides.map((slide: SlidesType, index: number) => (
+          <SwiperSlide className="h-[243px]" key={index}>
             <img
               className="object-cover h-full rounded-bl-[30px]"
               src={slide.url}
-              alt={slide}
+              alt="사진"
             />
           </SwiperSlide>
         ))}

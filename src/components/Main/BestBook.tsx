@@ -1,20 +1,19 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { EffectCoverflow, Pagination, Navigation } from "swiper/modules";
-
 import Arrow from "../../assets/images/main/arrow_right.svg";
-
-const photos = [
-  "https://images.pexels.com/photos/7469387/pexels-photo-7469387.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-  "https://images.pexels.com/photos/7469289/pexels-photo-7469289.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-  "https://images.pexels.com/photos/6213729/pexels-photo-6213729.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-  "https://images.pexels.com/photos/6213739/pexels-photo-6213739.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-  "https://images.pexels.com/photos/7469387/pexels-photo-7469387.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-];
+import { getBestBook } from "../../api/api";
+import { useQuery } from "@tanstack/react-query";
 
 const BestBook = () => {
+  const { data: bestBooks } = useQuery({
+    queryKey: ["bestBooks"],
+    queryFn: getBestBook,
+  });
+
+  console.log("bestBook :", bestBooks);
   return (
-    <div>
+    <div className="mx-6">
       {/* Header */}
       <div className="flex justify-between mt-[30px] mb-[20px]">
         <div className="text-2xl font-semibold">Best Book</div>
@@ -56,14 +55,16 @@ const BestBook = () => {
         }}
         className="coverflow"
       >
-        {photos.map((img, index) => {
+        {bestBooks?.map((data: any, index: number) => {
           return (
             <SwiperSlide key={index} className="">
-              <img src={img} alt="" />
+              <img src={data.image} alt="" />
             </SwiperSlide>
           );
         })}
       </Swiper>
+
+      <p>책 내용?</p>
     </div>
   );
 };

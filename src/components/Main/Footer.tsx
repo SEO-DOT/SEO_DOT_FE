@@ -12,7 +12,7 @@ const Footer = () => {
   };
 
   return (
-    <div className="mt-[20px] mb-[20px]">
+    <div className="mx-6 mt-[20px] mb-[20px]">
       {/* 로고 */}
       <div className="flex text-base font-bold mb-[20px]">(주) SEO.</div>
       {/* 펼쳐보기 */}

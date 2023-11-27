@@ -14,7 +14,7 @@ const List = () => {
 
   console.log(viewToggle);
   return (
-    <div>
+    <div className="mx-6">
       {/* Nav */}
       <div className="flex justify-end py-[12px] border-y-[1px]">
         {/* 정렬 */}

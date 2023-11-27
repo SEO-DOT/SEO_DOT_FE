@@ -4,7 +4,7 @@ import ChevronRightIMG from "../../assets/images/listPage/Chevron-Right.svg";
 
 const Search = () => {
   return (
-    <div className="flex items-center h-[69px]">
+    <div className="flex items-center h-[69px] mx-6">
       {/* 화살표 */}
       <div>
         <img

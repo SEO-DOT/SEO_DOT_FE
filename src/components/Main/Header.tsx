@@ -4,7 +4,7 @@ import Logo from "../../assets/images/main/logo.svg";
 
 const Header = () => {
   return (
-    <div className="flex justify-between">
+    <div className="flex justify-between mx-6">
       <div className="text-[#5EBAD9] text-[28px] font-semibold">
         <img src={Logo} alt="로고" />
       </div>

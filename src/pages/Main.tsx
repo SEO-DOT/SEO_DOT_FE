@@ -9,26 +9,10 @@ import Notice from "../components/Main/Notice";
 import Review from "../components/Main/Review";
 import Visual from "../components/Main/Visual";
 import slides from "../components/Main/Visual.json";
-import axios from "axios";
 
 const Main = () => {
-  const getDetail = async () => {
-    try {
-      const response = await axios.get(
-        `http://13.124.86.39:8080/api/welcome/new`
-      );
-      console.log(response);
-    } catch (error) {
-      console.log("error: ", error);
-    }
-  };
-
-  useEffect(() => {
-    getDetail();
-  }, []);
-
   return (
-    <div className="w-[375px] px-6 mx-auto">
+    <div className="w-[375px] mx-auto">
       {/* 헤더 */}
       <Header />
       {/* 네비게이션 바 */}
