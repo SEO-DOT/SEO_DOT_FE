@@ -11,6 +11,7 @@ import DetailPage from "./pages/DetailPage";
 import BookmarkPage from "./pages/BookmarkPage";
 import NotFound from "./pages/NotFound";
 
+
 const App = () => {
   return (
     <div className="sm:relative pt-[54px] pb-0 px-0 text-center min-h-screen bg-[#fff] lex items-center">
