@@ -25,6 +25,10 @@
   flex: 0 0 100%;
 }
 
+.swiper-pagination-bullet-active {
+  background: #5c5c5c;
+}
+
 /* Nav */
 .nav-wrapper {
   @apply overflow-hidden whitespace-nowrap;
