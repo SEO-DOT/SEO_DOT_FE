@@ -67,8 +67,8 @@ const NewBook = () => {
         <div className="w-[60px] h-[84px]">이미지</div>
         {/* 책 내용 */}
         <div className="flex flex-1 flex-col">
-          <h1>여름을 한 입 베어 물었더니</h1>
-          <div className="mt-[10px] mb-[10px]">작가 | 출판사</div>
+          <h1 className="text-left">여름을 한 입 베어 물었더니</h1>
+          <div className="text-left mt-[10px] mb-[10px]">작가 | 출판사</div>
           <div className="flex justify-end gap-[4px]">
             <div>10%</div>
             <div>39,000원</div>
