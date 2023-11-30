@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { useQueryClient } from "react-query";
-import { BsCart } from "react-icons/bs";
 import { ReactComponent as GearIcon } from "../assets/images/myPage/gear.svg";
 import { ReactComponent as PencilIcon } from "../assets/images/myPage/pencil.svg";
+import { ReactComponent as CartIcon } from "../assets/images/myPage/cart.svg";
 import MyPageNav from "../components/mypage/MyPageNav";
 import Order from "../components/mypage/order/Order";
 import Review from "../components/mypage/review/Review";
@@ -34,9 +34,9 @@ const MyPage = () => {
 
   return (
     <>
-      <header className="px-[24px] py-[20px] h-[79px flex justify-between items-center">
-        <p className="text-[24px] font-semibold">프로필</p>
-        <BsCart className="fill-[#797979] w-[24px] h-[24px]"></BsCart>
+      <header className="fixed top-0 left-0   w-full px-[24px] py-[20px] h-[79px] flex justify-between items-center">
+        <p className="flex-1 text-[14px] font-medium ">프로필</p>
+        <CartIcon className="w-[24px] h-[24px]"></CartIcon>
       </header>
       <MyProfile />
       <MyPageBox activePage={activePage}>

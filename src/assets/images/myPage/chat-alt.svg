@@ -1,4 +1,10 @@
-
-<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path fill-rule="evenodd" clip-rule="evenodd" d="M14 3.5V9.5C14 10.3284 13.3284 11 12.5 11H8.75L5 14V11H3.5C2.67157 11 2 10.3284 2 9.5V3.5C2 2.67157 2.67157 2 3.5 2H12.5C13.3284 2 14 2.67157 14 3.5ZM5.75 5.75H4.25V7.25H5.75V5.75ZM7.25 5.75H8.75V7.25H7.25V5.75ZM11.75 5.75H10.25V7.25H11.75V5.75Z" fill="#767676"/>
+<svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Group 17">
+<path id="Icon (Stroke)" d="M7.875 10H7.69961L7.56265 10.1096L4 12.9597V10.5V10H3.5H1.75C1.05964 10 0.5 9.44036 0.5 8.75V1.75C0.5 1.05964 1.05964 0.5 1.75 0.5H12.25C12.9404 0.5 13.5 1.05964 13.5 1.75V8.75C13.5 9.44036 12.9404 10 12.25 10H7.875Z" stroke="#959595"/>
+<g id="Group 16">
+<rect id="Rectangle 1697" x="2.91675" y="4.66663" width="1.16667" height="1.16667" fill="#959595"/>
+<rect id="Rectangle 1698" x="6.4165" y="4.66663" width="1.16667" height="1.16667" fill="#959595"/>
+<rect id="Rectangle 1699" x="9.9165" y="4.66663" width="1.16667" height="1.16667" fill="#959595"/>
+</g>
+</g>
 </svg>
