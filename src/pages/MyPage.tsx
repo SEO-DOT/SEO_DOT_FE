@@ -17,7 +17,6 @@ interface MyPageBoxProps {
 const MyPage = () => {
   const queryClient = useQueryClient();
   const [activePage, setActivePage] = useState<string>("주문배송");
-
   // 새로고침해도 현재 페이지 유지
   // useEffect(() => {
   //   const storedActivePage = localStorage.getItem("activePage");
@@ -34,7 +33,10 @@ const MyPage = () => {
 
   return (
     <>
-      <header className="fixed top-0 left-0   w-full px-[24px] py-[20px] h-[79px] flex justify-between items-center">
+      <header
+        className={`
+        mt-[-54px] bg-white w-full px-[24px] py-[20px] h-[79px] flex justify-between items-center`}
+      >
         <p className="flex-1 text-[14px] font-medium ">프로필</p>
         <CartIcon className="w-[24px] h-[24px]"></CartIcon>
       </header>
