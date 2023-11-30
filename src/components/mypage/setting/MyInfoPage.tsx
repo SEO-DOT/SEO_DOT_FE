@@ -120,7 +120,7 @@ const MyInfoPage: React.FC = () => {
   };
   return (
     <div>
-      <header className="fixed top-0 left-0  bg-[#fff] w-full border-b-[1px] border-[#F4F4F4] pt-[6px] pb-[18px] h-[79px] px-[24px] flex justify-between items-center">
+      <header className=" mt-[-54px] bg-[#fff] w-full border-b-[1px] border-[#F4F4F4] pt-[6px] pb-[18px] h-[79px] px-[24px] flex justify-between items-center">
         <LongArrowLeft
           className="w-[24px] h-[24px] cursor-pointer"
           onClick={onClickSettingPage}

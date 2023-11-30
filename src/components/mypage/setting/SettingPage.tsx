@@ -39,7 +39,7 @@ const Setting = () => {
   };
   return (
     <div className="bg-[#fff]">
-      <header className="fixed top-0 left-0   w-full border-b-[1px] border-[#F4F4F4] px-[24px] pt-[6px] pb-[18px] h-[79px] flex justify-between items-center">
+      <header className=" mt-[-54px]  w-full border-b-[1px] border-[#F4F4F4] px-[24px] pt-[6px] pb-[18px] h-[79px] flex justify-between items-center">
         <LongArrowLeft
           className="w-[24px] h-[24px] cursor-pointer"
           onClick={onClickMyPage}
