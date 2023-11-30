@@ -5,7 +5,8 @@ import { ReactComponent as ArrowLeft } from "../../../assets/images/myPage/arrow
 import { ReactComponent as CameraIcon } from "../../../assets/images/myPage/camera.svg";
 import { ReactComponent as ArrowRight } from "../../../assets/images/myPage/arrow-right.svg";
 import BottomNav from "../../common/BottomNav";
-const EditProfile = () => {
+
+const EditProfile: React.FC = () => {
   const navigate = useNavigate();
   const onClickMyPage = () => {
     navigate("/mypage");

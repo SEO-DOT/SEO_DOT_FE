@@ -43,7 +43,7 @@ const OrderTag = () => {
           {["#전체", "#준비중", "#배송중", "#배송완료", "#취소/교환"].map(
             (text, index) => (
               <div
-                className={`px-[10px] py-[7px] mr-[4px] flex inline-block h-[30px] bg-[#fff] border-solid rounded-[26px] border-[1px] border-[#5EBAD9] flex items-center justify-center ${getCategoryClass(
+                className={`px-[10px] py-[7px] mr-[4px] flex inline-block h-[30px] bg-[#fff] border-solid rounded-[26px] border-[1px] border-[#5EBAD9]  items-center justify-center ${getCategoryClass(
                   text
                 )}`}
                 style={getStyle(text)}

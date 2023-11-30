@@ -35,7 +35,7 @@ const BottomNav = () => {
   };
 
   return (
-    <div className="absolute left-0 bottom-[-1px] border-solid border-[1px] rounded-t-[20px] px-[24px] pb-[24px] pt-[12px] w-screen h-[84px] bg-[#fff] shadow-[0_-8px_20px_0px_rgba(0,0,0,0.08)]">
+    <div className="absolute left-0 bottom-[0px] border-solid border-[1px] rounded-t-[20px] px-[24px] pb-[24px] pt-[12px] w-screen h-[84px] bg-[#fff] shadow-[0_-8px_20px_0px_rgba(0,0,0,0.08)]">
       <div className="flex w-full h-[48px] justify-between items-center">
         <div
           onMouseEnter={() => setIsHomeHovered(true)}
