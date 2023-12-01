@@ -3,7 +3,7 @@ import Review from "./Review";
 
 import { TiStar } from "react-icons/ti";
 import { ReactComponent as DownButton } from "../../assets/images/detailPage/chevron-down.svg";
-import { useNavigate } from "react-router-dom";
+// import { useNavigate } from "react-router-dom";
 import EditReview from "./EditReview";
 
 interface ReviewProps {
@@ -16,12 +16,14 @@ const Reviews: React.FC<ReviewProps> = ({ score, onRatingChange }) => {
     const [clickedTab, setClickedTab] = useState(0);
     const [editReview, setEditReview] = useState(false);
 
+    console.log(setEditReview);
+
     const filterTab: { [key: number]: string } = {
         0: "최신순",
         1: "공감순",
     };
 
-    const navigate = useNavigate();
+    // const navigate = useNavigate();
 
     const onClickReview = () => {
         if (editReview === true) {

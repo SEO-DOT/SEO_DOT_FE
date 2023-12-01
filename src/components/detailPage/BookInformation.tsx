@@ -28,6 +28,8 @@ const BookInformation = () => {
     const [showDetail, setShowDetail] = useState(false);
     const [moreView, setMoreView] = useState(false);
 
+    console.log(setParsedBookData);
+    
     const showMoreView = () => {
         setMoreView(!moreView);
     };

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 
 import { ReactComponent as LineButton } from "../../assets/images/detailPage/Line 1.svg";
 import { ReactComponent as CommentButton } from "../../assets/images/detailPage/return-down-forward-outline.svg";
