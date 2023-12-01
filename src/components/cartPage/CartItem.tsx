@@ -1,35 +1,35 @@
-import React, { useState } from "react";
+import React from "react";
 import { ReactComponent as CheckBox } from "../../assets/images/cartPage/check-circle.svg";
-import { ReactComponent as CheckedBox } from "../../assets/images/cartPage/check-circle-fill.svg";
+// import { ReactComponent as CheckedBox } from "../../assets/images/cartPage/check-circle-fill.svg";
 import { ReactComponent as XButton } from "../../assets/images/cartPage/x.svg";
-import { ReactComponent as PlusButton } from "../../assets/images/cartPage/plus.svg";
-import { ReactComponent as MinusButton } from "../../assets/images/cartPage/minus.svg";
-import { CartItems } from "../../types/data";
-import { deleteCart } from "../../api/api";
+// import { ReactComponent as PlusButton } from "../../assets/images/cartPage/plus.svg";
+// import { ReactComponent as MinusButton } from "../../assets/images/cartPage/minus.svg";
+// import { CartItems } from "../../types/data";
+// import { deleteCart } from "../../api/api";
 // import { QueryClient, useMutation, useQueryClient } from "@tanstack/react-query";
-import { QueryKeys, getClient } from "../../queryClient";
+// import { QueryKeys, getClient } from "../../queryClient";
 
 const CartItem = () => {
     // const queryClient = useQueryClient();
-    const [cartItems, setCartItems] = useState<CartItems[]>([{ id: 1, name: "Item 1", quantity: 1 }]);
+    // const [cartItems, setCartItems] = useState<CartItems[]>([{ id: 1, name: "Item 1", quantity: 1 }]);
 
     // const [inputValue, setInputValue] = useState<string>("");
 
-    const minusNumber = (itemId: number) => {
-        setCartItems((prevItems) =>
-            prevItems.map((item) => (item.id === itemId ? { ...item, quantity: Math.max(1, item.quantity - 1) } : item))
-        );
-    };
+    // const minusNumber = (itemId: number) => {
+    //     setCartItems((prevItems) =>
+    //         prevItems.map((item) => (item.id === itemId ? { ...item, quantity: Math.max(1, item.quantity - 1) } : item))
+    //     );
+    // };
 
-    const plusNumber = (itemId: number) => {
-        setCartItems((prevItems) =>
-            prevItems.map((item) => (item.id === itemId ? { ...item, quantity: Math.min(100, item.quantity + 1) } : item))
-        );
-    };
+    // const plusNumber = (itemId: number) => {
+    //     setCartItems((prevItems) =>
+    //         prevItems.map((item) => (item.id === itemId ? { ...item, quantity: Math.min(100, item.quantity + 1) } : item))
+    //     );
+    // };
 
-    const handleChange = () => {
-        console.log("111");
-    };
+    // const handleChange = () => {
+    //     console.log("111");
+    // };
 
     // const { mutate: deleteCartItem } = useMutation((itemId: number) => deleteCart(itemId), {
     //     onSuccess: () => {

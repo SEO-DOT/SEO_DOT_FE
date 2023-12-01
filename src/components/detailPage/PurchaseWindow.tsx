@@ -1,7 +1,7 @@
-import React, { useState } from "react";
+import React from "react";
 import { ReactComponent as XButton } from "../../assets/images/cartPage/x.svg";
-import { ReactComponent as UpButton } from "../../assets/images/cartPage/chevron-up.svg";
-import Button from "../../hooks/Button";
+// import { ReactComponent as UpButton } from "../../assets/images/cartPage/chevron-up.svg";
+// import Button from "../../hooks/Button";
 import Quantity from "../../hooks/Quantity";
 import "./detail.css";
 
@@ -11,17 +11,17 @@ interface OrderProps {
 }
 
 const PurchaseWindow: React.FC<OrderProps> = ({ orderButton, setOrderButton }) => {
-    const [word, setWord] = useState("");
-    const [color, setColor] = useState("");
-    const [textColor, setTextColor] = useState("");
+    // const [word, setWord] = useState("");
+    // const [color, setColor] = useState("");
+    // const [textColor, setTextColor] = useState("");
 
     const closeHandler = () => {
         setOrderButton(false);
     };
 
-    const orderButtonHandler = () => {
-        setOrderButton(true);
-    };
+    // const orderButtonHandler = () => {
+    //     setOrderButton(true);
+    // };
 
     return (
         <div className="w-full h-[276px] border-[1px] border-solid rounded-t-[20px] fixed bottom-0 bg-[#FFFFFF] z-50 shadow">

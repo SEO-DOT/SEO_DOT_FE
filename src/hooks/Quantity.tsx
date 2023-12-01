@@ -2,14 +2,16 @@ import React, { useState } from "react";
 import { ReactComponent as PlusButton } from "../assets/images/detailPage/plus.svg";
 import { ReactComponent as MinusButton } from "../assets/images/detailPage/minus.svg";
 
-interface CartItem {
-    id: number;
-    name: string;
-    quantity: number;
-}
+// interface CartItem {
+//     id: number;
+//     name: string;
+//     quantity: number;
+// }
 
 const Quantity = () => {
     const [quantity, setQuantity] = useState(1);
+
+    console.log(setQuantity);
 
     // const [cartItems, setCartItems] = useState<CartItem[]>([
     //     { id: 1, name: "Item 1", quantity: 1 },

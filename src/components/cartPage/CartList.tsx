@@ -1,7 +1,7 @@
 import React, { SyntheticEvent, useRef, createRef } from "react";
 import CartItem from "./CartItem";
 import { ReactComponent as CheckBox } from "../../assets/images/cartPage/check-circle.svg";
-import { ReactComponent as CheckedBox } from "../../assets/images/cartPage/check-circle-fill.svg";
+// import { ReactComponent as CheckedBox } from "../../assets/images/cartPage/check-circle-fill.svg";
 import { ItemsProps } from "../../types/data";
 
 const CartList = ({ items }: { items: ItemsProps[] }) => {

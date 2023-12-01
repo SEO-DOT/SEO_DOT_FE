@@ -2,23 +2,23 @@ import React, { useEffect, useState } from "react";
 import bookData from "../data.json";
 import BookInformation from "../components/detailPage/BookInformation";
 import Recommand from "../components/detailPage/Recommand";
-import Review from "../components/detailPage/Review";
+// import Review from "../components/detailPage/Review";
 import Transfer from "../components/detailPage/Transfer";
-import axios from "axios";
+// import axios from "axios";
 import BookDetail from "../components/detailPage/BookDetail";
 import Reviews from "../components/detailPage/Reviews";
-import EditReview from "../components/detailPage/EditReview";
-import { ReactComponent as UpButton } from "../assets/images/cartPage/chevron-up.svg";
+// import EditReview from "../components/detailPage/EditReview";
+// import { ReactComponent as UpButton } from "../assets/images/cartPage/chevron-up.svg";
 import OrderStatus from "../components/detailPage/OrderStatus";
 import PurchaseWindow from "../components/detailPage/PurchaseWindow";
 
 const DetailPage = () => {
     const [parsedBookData, setParsedBookData] = useState<Book>(bookData);
     const [clickedTab, setClickedTab] = useState(0); //router 사용하기
-    const [challenges, setChallenges] = useState(0);
-    const [editReview, setEditReview] = useState(false);
+    // const [challenges, setChallenges] = useState(0);
+    // const [editReview, setEditReview] = useState(false);
     const [orderButton, setOrderButton] = useState(false);
-    const [status, setStatus] = useState("");
+    // const [status, setStatus] = useState("");
 
     const tabName: { [key: number]: string } = {
         0: "책정보",

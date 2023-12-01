@@ -1,7 +1,5 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { useQueryClient } from "react-query";
-import { ReactComponent as GearIcon } from "../assets/images/myPage/gear.svg";
-import { ReactComponent as PencilIcon } from "../assets/images/myPage/pencil.svg";
 import { ReactComponent as CartIcon } from "../assets/images/myPage/cart.svg";
 import MyPageNav from "../components/mypage/MyPageNav";
 import Order from "../components/mypage/order/Order";

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 
 import { ReactComponent as NextButton } from "../../assets/images/detailPage/chevron-right-small-circle.svg";
 import { ReactComponent as FillStarButton } from "../../assets/images/detailPage/Active.svg";
@@ -7,15 +7,15 @@ import { ReactComponent as StarButton } from "../../assets/images/detailPage/Ina
 import { ReactComponent as LikeButton } from "../../assets/images/detailPage/like.svg";
 import { ReactComponent as UnLikeButton } from "../../assets/images/detailPage/unlike.svg";
 import { ReactComponent as ChatButton } from "../../assets/images/detailPage/chat-alt.svg";
-import { ReactComponent as ScoreButton } from "../../assets/images/detailPage/anchor.svg";
-import { ReactComponent as FillScoreButton } from "../../assets/images/detailPage/anchor-fill.svg";
-import { ReactComponent as CheckButton } from "../../assets/images/cartPage/check-circle.svg";
-import { ReactComponent as FillCheckButton } from "../../assets/images/cartPage/check-circle-fill.svg";
-import { ReactComponent as UpButton } from "../../assets/images/detailPage/chevron-up.svg";
+// import { ReactComponent as ScoreButton } from "../../assets/images/detailPage/anchor.svg";
+// import { ReactComponent as FillScoreButton } from "../../assets/images/detailPage/anchor-fill.svg";
+// import { ReactComponent as CheckButton } from "../../assets/images/cartPage/check-circle.svg";
+// import { ReactComponent as FillCheckButton } from "../../assets/images/cartPage/check-circle-fill.svg";
+// import { ReactComponent as UpButton } from "../../assets/images/detailPage/chevron-up.svg";
 import Comments from "./Comments";
 
 const Review = () => {
-    const [ratingValue, setRatingValue] = useState(0);
+    // const [ratingValue, setRatingValue] = useState(0);
     const [review, setReview] = useState(false);
     const [comments, setComments] = useState(false);
     const [like, setLike] = useState(false);
@@ -30,9 +30,9 @@ const Review = () => {
     };
     console.log(comments);
 
-    const chatHandler = () => {
-        console.log("asdd");
-    };
+    // const chatHandler = () => {
+    //     console.log("asdd");
+    // };
 
     const likeHandler = () => {
         setLike(!like);

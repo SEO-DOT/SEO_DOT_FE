@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import { ReactComponent as AnchorIcon } from "../../../assets/images/myPage/anchor.svg";
 import { ReactComponent as HeartIcon } from "../../../assets/images/myPage/heart.svg";
 import { ReactComponent as ChatIcon } from "../../../assets/images/myPage/chat-alt.svg";
 import { ReactComponent as GrayStarIcon } from "../../../assets/images/myPage/star_gray.svg";
@@ -87,7 +86,7 @@ const Review = () => {
     }
   }, [reviewData]);
 
-  //console.log("리뷰 목록", reviewInfo);
+  console.log("리뷰 목록", reviewInfo);
   //onsole.log("도서정보", reviewBookInfo);
 
   return (
