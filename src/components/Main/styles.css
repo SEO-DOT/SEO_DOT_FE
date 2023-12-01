@@ -1,0 +1,64 @@
+/* TailWind */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.w-important {
+  width: auto !important;
+}
+
+.swiper-pagination {
+  margin-top: 0px;
+}
+
+#swiper-container {
+  overflow: hidden;
+}
+
+.slides {
+  display: flex;
+  transition: transform 0.3s;
+  width: calc(100% * var(--totalSlides));
+}
+
+.slide {
+  flex: 0 0 100%;
+}
+
+/* Nav */
+.nav-wrapper {
+  @apply overflow-hidden whitespace-nowrap;
+}
+
+.nav-slide {
+  @apply inline-block w-important first:font-semibold;
+}
+
+/* NewBook */
+.active-categori {
+  @apply text-[#5ebad9] border-[#5ebad9];
+}
+
+/* BookMark */
+.bookmark-contents {
+  @apply text-[16px] text-left;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+
+/* Review */
+.review-contents {
+  @apply text-[12px] text-left;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 4;
+}
+
+.swiper-scrollbar .swiper-scrollbar-horizontal {
+  margin-bottom: 30px;
+}
