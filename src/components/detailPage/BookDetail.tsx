@@ -7,6 +7,10 @@ interface Props {
 }
 
 const BookDetail = ({ parsedBookData, setParsedBookData }: Props) => {
+    const shareHandler = () => {
+        alert("공유하시겠습니까?");
+    };
+
     return (
         <>
             <div className="w-50 h-[375px] flex justify-center items-center">
@@ -29,7 +33,10 @@ const BookDetail = ({ parsedBookData, setParsedBookData }: Props) => {
                         ))}
                         <h3 className="text-[20px] font-[600] pt-[12px]">{parsedBookData.title}</h3>
                     </div>
-                    <ShareButton className="cursor-pointer" />
+                    <ShareButton
+                        className="cursor-pointer"
+                        onClick={shareHandler}
+                    />
                 </div>
                 <p className="font-[500] mt-[6px] mb-[12px]">{parsedBookData.author}</p>
                 <span className="text-[#797979] text-[12px] pr-[8px] border-r-[1px] border-[#797979] ">{parsedBookData.publisher}</span>

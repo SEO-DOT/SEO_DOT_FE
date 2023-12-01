@@ -32,6 +32,24 @@ const DetailPage = () => {
         // 여기에서 선택된 평점에 대한 처리를 수행하면 됩니다.
     };
 
+    // const getDetail = async () => {
+    //     try {
+    //         const response = await axios.get(`http://13.124.86.39:8080/api/books/3`, {
+    //             headers: {
+    //                 Authorization:
+    //                     "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJqa2prOTUyMkBuYXZlci5jb20iLCJhdXRoIjoiVVNFUiIsIk9hdXRoSWQiOnsib2F1dGhTZXJ2ZXJJZCI6IjMxNzIzMjI3ODQiLCJwbGF0Zm9ybSI6IktBS0FPIn0sImV4cCI6MjAwMDgxODYyMywiaWF0IjoxNzAwODE4NjIzfQ.dThL4B7Itis-jscylr7j15Xz6usvYZypEsUbWoURY9A",
+    //             },
+    //         });
+    //         console.log(response);
+    //     } catch (error) {
+    //         console.log("error: ", error);
+    //     }
+    // };
+
+    // useEffect(() => {
+    //     getDetail();
+    // }, []);
+
     // const orderButtonHandler = () => {
     //     setOrderButton(true);
     // };
@@ -64,8 +82,6 @@ const DetailPage = () => {
     useEffect(() => {
         setParsedBookData(bookData);
     }, []);
-
-    
 
     return (
         <>
@@ -148,16 +164,3 @@ export default DetailPage;
 //             >
 //                 bookmark
 //             </button> */}
-
-// const getDetail = async () => {
-//     try {
-//         const response = await axios.get(`http://13.124.86.39:8080/api/books/3`);
-//         console.log(response);
-//     } catch (error) {
-//         console.log("error: ", error);
-//     }
-// };
-
-// useEffect(() => {
-//     getDetail();
-// }, []);

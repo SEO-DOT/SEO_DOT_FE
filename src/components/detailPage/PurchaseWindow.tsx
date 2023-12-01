@@ -25,14 +25,14 @@ const PurchaseWindow: React.FC<OrderProps> = ({ orderButton, setOrderButton }) =
 
     return (
         <div className="w-full h-[276px] border-[1px] border-solid rounded-t-[20px] fixed bottom-0 bg-[#FFFFFF] z-50 shadow">
-            <div className="w-full h-[56px] flex justify-between p-24 pt-[22px] pb-[8px] border-b-[1px] border-solid border-[#E8E8E8]">
+            <div className="w-full h-[56px] flex justify-between p-24 pt-[22px] pb-[8px]">
                 <p></p>
                 <XButton
                     className="cursor-pointer"
                     onClick={closeHandler}
                 />
             </div>
-            <div className="w-full h-[57px] bg-[#F4F4F4] flex justify-between items-center box-border pr-[26px] pl-[26px] pt-[11px] pb-[10px]">
+            <div className="w-full h-[57px] bg-[#F9F9F9] flex justify-between items-center box-border pr-[26px] pl-[26px] pt-[11px] pb-[10px]">
                 <p className="text-[#959595]">주문수량</p>
                 <Quantity />
             </div>
