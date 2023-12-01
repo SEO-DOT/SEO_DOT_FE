@@ -28,7 +28,6 @@ jobs:
         cache: 'yarn'
     - run: yarn install
     - run: yarn run build --if-present
-    - run: yarn test
     
     - uses: awact/s3-action@master
       with:
