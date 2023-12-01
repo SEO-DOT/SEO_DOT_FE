@@ -6,11 +6,11 @@ import { ReactComponent as PlusButton } from "../../assets/images/cartPage/plus.
 import { ReactComponent as MinusButton } from "../../assets/images/cartPage/minus.svg";
 import { CartItems } from "../../types/data";
 import { deleteCart } from "../../api/api";
-import { QueryClient, useMutation, useQueryClient } from "@tanstack/react-query";
+// import { QueryClient, useMutation, useQueryClient } from "@tanstack/react-query";
 import { QueryKeys, getClient } from "../../queryClient";
 
 const CartItem = () => {
-    const queryClient = useQueryClient();
+    // const queryClient = useQueryClient();
     const [cartItems, setCartItems] = useState<CartItems[]>([{ id: 1, name: "Item 1", quantity: 1 }]);
 
     // const [inputValue, setInputValue] = useState<string>("");
@@ -65,11 +65,6 @@ const CartItem = () => {
                         <div className="flex">
                             <p className="mr-[4px]">10%</p>
                             <p>4,000원</p>
-                        </div>
-                        <div className="flex justify-end items-center">
-                            <MinusButton />
-                            <input className="w-[36px] h-[28px] text-center border rounded-lg mr-[8px] ml-[8px]" />
-                            <PlusButton />
                         </div>
                     </div>
                 </div>

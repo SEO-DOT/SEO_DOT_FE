@@ -17,6 +17,7 @@ import EditProfile from "./components/mypage/profile/EditProfile";
 
 const queryClient = new QueryClient();
 
+
 const App = () => {
   return (
     <QueryClientProvider client={queryClient}>
