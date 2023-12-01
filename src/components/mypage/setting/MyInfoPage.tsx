@@ -3,7 +3,6 @@ import { useNavigate } from "react-router-dom";
 import { ReactComponent as LongArrowLeft } from "../../../assets/images/myPage/long-arrow-left.svg";
 import { ReactComponent as CartIcon } from "../../../assets/images/myPage/cart.svg";
 import instance from "../../../api/api";
-import AddressSearch from "../../common/AddressSearch";
 
 export interface MyInfoData {
   userName: string;
@@ -18,13 +17,7 @@ const MyInfoPage: React.FC = () => {
   const [nameEditing, setNameEditing] = useState(false);
   const [phoneEditing, setPhoneEditing] = useState(false);
   const [addressEditing, setAddressEditing] = useState(false);
-  // const [myInfoEditing, setMyInfoEditing] = useState({
-  //   detailAddress: "",
-  //   phoneNumber: "",
-  //   streetAddress: "",
-  //   userName: "",
-  //   zoneCode: "",
-  // });
+
   const [myInfoData, setMyInfoData] = useState<MyInfoData[]>([]);
   const [myInfo, setMyInfo] = useState<MyInfoData>({
     detailAddress: "",
@@ -33,6 +26,8 @@ const MyInfoPage: React.FC = () => {
     userName: "",
     zoneCode: "",
   });
+
+  console.log("아어", myInfoData);
 
   const getMyInfoData = async () => {
     try {
@@ -115,9 +110,6 @@ const MyInfoPage: React.FC = () => {
     setPhoneEditing(false);
   };
 
-  const handlerAddressBlur = () => {
-    setAddressEditing(false);
-  };
   return (
     <div>
       <header className=" mt-[-54px] bg-[#fff] w-full border-b-[1px] border-[#F4F4F4] pt-[6px] pb-[18px] h-[79px] px-[24px] flex justify-between items-center">
@@ -143,7 +135,7 @@ const MyInfoPage: React.FC = () => {
                     value={myInfo.userName}
                     onChange={handleNameInputChange}
                     onBlur={handleNameBlur}
-                    className="rounded  w-full h-[36px] py-[8.5px] mr-[4px]"
+                    className="rounded  w-full h-[36px] py-[8.5px] mr-[4px] focus:border-blue-500 focus:outline-none"
                   />
                 ) : (
                   <div className="text-[#C1C1C1] font-medium py-[8.5px] text-[16px]">

@@ -3,8 +3,6 @@ import { useNavigate } from "react-router-dom";
 import { ReactComponent as CartIcon } from "../../../assets/images/myPage/cart.svg";
 import { ReactComponent as ArrowRight } from "../../../assets/images/myPage/arrow-right.svg";
 import { ReactComponent as LongArrowLeft } from "../../../assets/images/myPage/long-arrow-left.svg";
-import BottomNav from "../../common/BottomNav";
-import classNames from "classnames";
 
 const Setting = () => {
   const initialToggleStates = [

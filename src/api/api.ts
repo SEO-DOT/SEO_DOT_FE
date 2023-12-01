@@ -9,7 +9,6 @@ instance.interceptors.request.use(
   // 요청을 보내기 전 수행되는 함수
   // 매개변수 이름은 config가 아니라도 됨
   function (config) {
-    let accesstoken = localStorage.getItem("authorization");
     config.headers.Authorization = `Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJqa2prOTUyMkBuYXZlci5jb20iLCJhdXRoIjoiVVNFUiIsIk9hdXRoSWQiOnsib2F1dGhTZXJ2ZXJJZCI6IjMxNzIzMjI3ODQiLCJwbGF0Zm9ybSI6IktBS0FPIn0sImV4cCI6MjAwMDgxODYyMywiaWF0IjoxNzAwODE4NjIzfQ.dThL4B7Itis-jscylr7j15Xz6usvYZypEsUbWoURY9A`;
     return config;
   },

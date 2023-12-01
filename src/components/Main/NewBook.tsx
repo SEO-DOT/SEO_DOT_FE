@@ -1,4 +1,4 @@
-import React, { MouseEventHandler, useState } from "react";
+import React, { useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import Arrow from "../../assets/images/main/arrow_right.svg";
 

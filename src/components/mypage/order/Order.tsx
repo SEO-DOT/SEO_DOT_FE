@@ -1,21 +1,7 @@
-import React, { useEffect } from "react";
 import OrderTag from "./OrderTag";
 import BookImg from "../../../assets/images/myPage/Review_IMG.png";
-import instance from "../../../api/api";
-const Order = () => {
-  const getUserInfoOrder = async () => {
-    try {
-      const response = await instance.get(`/api/mypage/orders`);
-      console.log("주문조회data", response);
-      return response;
-    } catch (error) {
-      console.error("mypage 주문조회 오류", error);
-    }
-  };
 
-  // useEffect(() => {
-  //   getUserInfoOrder();
-  // }, []); // 컴포넌트 마운트 시에만 대시보드 정보 조회
+const Order = () => {
   return (
     <div className="flex-cul w-full h-full bg-blue-300">
       <OrderTag />
