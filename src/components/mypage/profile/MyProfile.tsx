@@ -3,7 +3,6 @@ import { useNavigate } from "react-router-dom";
 import { ReactComponent as GearIcon } from "../../../assets/images/myPage/gear.svg";
 import { ReactComponent as PencilIcon } from "../../../assets/images/myPage/pencil.svg";
 import instance from "../../../api/api";
-import EditProfile from "./EditProfile";
 
 export interface UserData {
   userId: string;
@@ -26,6 +25,7 @@ const MyProfile = () => {
     profileImage: "",
   });
 
+  console.log(userData);
   const getUserInfo = async () => {
     try {
       const response = await instance.get(`/api/mypage/user`);
