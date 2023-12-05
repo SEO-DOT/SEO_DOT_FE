@@ -42,7 +42,7 @@
   @apply text-[#000000];
 }
 /* NewBook */
-.active-categori {
+.active-category {
   @apply text-[#5ebad9] border-[#5ebad9];
 }
 
