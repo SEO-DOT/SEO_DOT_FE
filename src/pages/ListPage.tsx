@@ -7,7 +7,7 @@ import List from "../components/ListPage/List";
 
 const ListPage = () => {
   return (
-    <div className="w-[375px] px-6 mx-auto">
+    <div className="w-[375px] mx-auto">
       <Header />
       <Search />
       <Nav />

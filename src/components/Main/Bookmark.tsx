@@ -7,7 +7,7 @@ import "./styles.css";
 
 const Bookmark = ({ slides }: { slides: any[] }) => {
   return (
-    <div>
+    <div className="mx-6">
       {/* Header */}
       <div className="flex justify-between mt-[30px] mb-[20px]">
         <div className="text-2xl font-semibold">OO님의 북마크리스트</div>
@@ -26,8 +26,8 @@ const Bookmark = ({ slides }: { slides: any[] }) => {
         spaceBetween={12}
         pagination={{ clickable: true }}
       >
-        {slides.map((slide) => (
-          <SwiperSlide className="flex flex-col" key={slide.image}>
+        {slides.map((index) => (
+          <SwiperSlide className="flex flex-col" key={index}>
             <div className="flex flex-col w-[160px] h-[160px] overflow-hidden pb-[10px] pl-[13px] pr-[12px] rounded-[4px] box-border bg-[#D1D1D1]">
               <img src={Arrow_left} alt="" />
             </div>

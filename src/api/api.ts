@@ -31,6 +31,29 @@ instance.interceptors.response.use(
   }
 );
 export default instance;
+
+// 베스트북 요청
+export const getBestBook = async () => {
+  try {
+    const response = await instance.get(`/welcome/best`);
+    return response.data;
+  } catch (error) {
+    console.error("API call failed:", error);
+    throw error;
+  }
+};
+
+// 신간도서 요청
+export const getNewBook = async () => {
+  try {
+    const response = await instance.get(`/welcome/new`);
+    return response.data;
+  } catch (error) {
+    console.error("API call failed:", error);
+    throw error;
+  }
+};
+
 // CART ----------------------------------------------------------------------------------------
 
 // cart 요청

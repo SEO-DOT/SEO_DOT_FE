@@ -10,7 +10,7 @@ import Comment from "../../assets/images/main/comment.svg";
 
 const Review = () => {
   return (
-    <div>
+    <div className="mx-6">
       {/* Header */}
       <div className="flex justify-between mt-[30px] mb-[20px] text-2xl font-semibold">
         인기리뷰
