@@ -1,13 +1,14 @@
 import React from "react";
 import Cart from "../../assets/images/main/cart.svg";
 import Logo from "../../assets/images/main/logo.svg";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   return (
     <div className="flex justify-between mx-6">
-      <div className="text-[#5EBAD9] text-[28px] font-semibold">
+      <Link to="/" className="text-[#5EBAD9] text-[28px] font-semibold">
         <img src={Logo} alt="로고" />
-      </div>
+      </Link>
       <div className="relative flex items-center w-[32px]">
         <img className="w-[24px] h-[24px]" src={Cart} alt="카트" />
         {/* 장바구니 카운트 */}
