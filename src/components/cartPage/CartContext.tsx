@@ -1,4 +1,4 @@
 import { createContext } from "react";
-import { ItemsProps } from "../../types/data";
+// import { ItemsProps } from "../../types/data";
 
-export const CartContext = createContext<any>(null)
+export const CartContext = createContext<any>(null);

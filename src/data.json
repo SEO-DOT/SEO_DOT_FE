@@ -10,11 +10,12 @@
     "price": 19800,
     "discountRate": 10,
     "discountPrice": 17820,
-    "score": 4.5,
+    "score": 3,
     "bookmark": true,
     "description": "살 날이 얼마 남지 않은 ‘미래의 …",
     "publicationDate": "2023년 08월 30일",
     "publisher": "상상스퀘어",
+    "isAdultContent": "N",
     "keywordList": ["keyword1", "keyword2", "keyword3"],
     "categoryList": ["국내도서", "자기계발", "성공/처세", "자기관리/처세"]
 }

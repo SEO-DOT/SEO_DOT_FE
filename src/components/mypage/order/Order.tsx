@@ -1,6 +1,5 @@
-import React from "react";
 import OrderTag from "./OrderTag";
-import BookImg from "../../../assets/images/mypage/Review_IMG.png";
+import BookImg from "../../../assets/images/myPage/Review_IMG.png";
 
 const Order = () => {
   return (
@@ -9,10 +8,10 @@ const Order = () => {
       <section className="w-full h-screen bg-[#18ca95] overflow-auto">
         <div className="w-full bg-[#fff] mb-[12px]">
           <div className="px-[24px] flex justify-between items-center w-full h-[40px] border-[1px] border-[#000]">
-            <p className="text-left text-[16px] font-semibold">
+            <p className="text-left text-[16px] font-medium">
               23.10.10(123456789)
             </p>
-            <p className="text-[12px] text-[#767676]">주문상세{">"}</p>
+            <p className="text-[12px] text-[#767676]">주문상세</p>
           </div>
           <div className="mx-[24px] flex py-[20px] border-b-[1px] border-b-[#e8e8e8]  bg-[#efabe6]">
             <img
@@ -21,11 +20,11 @@ const Order = () => {
               alt="reviewBook"
             />
             <div className=" flex-cul flex-1 font-medium text-justify h-full overflow-hidden">
-              <p className="items-center h-[19px] whitespace-nowrap text-[14px] font-bold  text-black">
+              <p className="items-center h-[19px] whitespace-nowrap text-[14px] font-medium  text-black">
                 여름을 한 입 베어 물었더니
               </p>
               <div
-                className="flex items-center text-[12px] font-medium text-[#979797]"
+                className="flex items-center text-[12px] font-normal text-[#797979]"
                 style={{
                   whiteSpace: "nowrap",
                   textOverflow: "ellipsis",
@@ -33,15 +32,15 @@ const Order = () => {
                 }}
               >
                 <p>작가</p>
-                <div className="flex items-center mx-[4px] w-[1px] h-[10px] bg-[#979797]"></div>
+                <div className="flex items-center mx-[4px] w-[1px] h-[10px] bg-[#797979]"></div>
                 <p>출판사</p>
               </div>
-              <p className="text-[12px] font-medium text-[#979797]">수량:1</p>
+              <p className="text-[12px] font-medium text-[#797979]">수량:1</p>
               <div className="w-full bg-[#fff] text-right">
-                <p className="text-[12px] font-semibold text-[#5EBAD9]">
+                <p className="text-[12px] font-medium text-[#5EBAD9]">
                   배송완료
                 </p>
-                <p className="text-[16px] font-bold">39,000원</p>
+                <p className="text-[14px] font-bold">39,000원</p>
               </div>
             </div>
           </div>

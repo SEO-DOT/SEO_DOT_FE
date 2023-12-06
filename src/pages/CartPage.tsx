@@ -4,7 +4,7 @@ import Order from "../components/cartPage/Order";
 import CartList from "../components/cartPage/CartList";
 import { useQuery } from "@tanstack/react-query";
 import { getCart } from "../api/api";
-import { ItemsProps } from "../types/data";
+// import { ItemsProps } from "../types/data";
 import { CartContext } from "../components/cartPage/CartContext";
 import { QueryKeys } from "../queryClient";
 

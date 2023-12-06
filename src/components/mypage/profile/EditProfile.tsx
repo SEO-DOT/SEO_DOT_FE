@@ -1,11 +1,12 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import { BsCart } from "react-icons/bs";
-import { ReactComponent as ArrowLeft } from "../../../assets/images/mypage/arrow-left.svg";
-import { ReactComponent as CameraIcon } from "../../../assets/images/mypage/camera.svg";
-import { ReactComponent as ArrowRight } from "../../../assets/images/mypage/arrow-right.svg";
+import { ReactComponent as ArrowLeft } from "../../../assets/images/myPage/arrow-left.svg";
+import { ReactComponent as CameraIcon } from "../../../assets/images/myPage/camera.svg";
+import { ReactComponent as ArrowRight } from "../../../assets/images/myPage/arrow-right.svg";
 import BottomNav from "../../common/BottomNav";
-const EditProfile = () => {
+
+const EditProfile: React.FC = () => {
   const navigate = useNavigate();
   const onClickMyPage = () => {
     navigate("/mypage");
@@ -13,6 +14,7 @@ const EditProfile = () => {
   const onClickMyInfoPage = () => {
     navigate("/setting/myinfo");
   };
+
   return (
     <div className="h-screen flex flex-col justify-between">
       <header className="fixed w-full top-0 px-[24px] py-[25px] h-[79px] flex justify-between items-center">

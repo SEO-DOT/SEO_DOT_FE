@@ -24,7 +24,11 @@ const categories = [
 ];
 
 const Nav = () => {
-  const [selectedCategory, setSelectedCategory] = useState("HOME");
+    const [selectedCategory, setSelectedCategory] = useState("HOME");
+    console.log(selectedCategory);
+    const handleCategoryClick = (category: any) => {
+        setSelectedCategory(category);
+    };
 
   const handleCategoryClick = (category: any) => {
     setSelectedCategory(category.title);
